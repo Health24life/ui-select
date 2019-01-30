@@ -4,6 +4,7 @@
                 'select2-container-active': $select.focus,
                 'select2-allowclear': $select.allowClear && !$select.isEmpty()}">
   <div class="ui-select-match"></div>
+  <span ng-show="$select.open && $select.refreshing  && $select.spinnerEnabled" class="ui-select-refreshing {{$select.spinnerClass}}"></span>
   <div class="ui-select-dropdown select2-drop select2-with-searchbox select2-drop-active"
        ng-class="{'select2-display-none': !$select.open}">
     <div class="search-container" ng-class="{'ui-select-search-hidden':!$select.searchEnabled, 'select2-search':$select.searchEnabled}">
